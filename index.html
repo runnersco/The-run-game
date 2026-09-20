@@ -1,0 +1,473 @@
+<div id="customization">
+
+  <div class="creatorHeader">
+
+    <div class="miniLogo">RUNNER</div>
+
+    <h1>CREATE YOUR CHARACTER</h1>
+
+    <p>
+      Build your character before the run begins.
+    </p>
+
+  </div>
+
+
+  <div class="creatorCard">
+
+    <div class="previewArea">
+
+      <div class="sun"></div>
+
+      <div class="previewCloud cloud1"></div>
+      <div class="previewCloud cloud2"></div>
+
+
+      <div id="previewCharacter">
+
+        <div id="previewHead">
+
+          <div class="previewEye leftEye"></div>
+          <div class="previewEye rightEye"></div>
+
+        </div>
+
+
+        <div id="previewBody"></div>
+
+
+        <div class="previewLeg leftLeg"></div>
+        <div class="previewLeg rightLeg">
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="sectionTitle">
+      SKIN
+    </div>
+
+
+    <div class="optionRow">
+
+      <button
+        class="optionButton skinOption selected"
+        onclick="changeSkin('#8b5a2b',this)"
+      >
+
+        <span class="colorCircle originalColor"></span>
+
+        Original
+
+      </button>
+
+
+      <button
+        class="optionButton skinOption"
+        onclick="changeSkin('#f1b27a',this)"
+      >
+
+        <span class="colorCircle lightColor"></span>
+
+        Light
+
+      </button>
+
+
+      <button
+        class="optionButton skinOption"
+        onclick="changeSkin('#5a321f',this)"
+      >
+
+        <span class="colorCircle darkColor"></span>
+
+        Dark
+
+      </button>
+
+    </div>
+
+
+    <div class="sectionTitle">
+      SHIRT
+    </div>
+
+
+    <div class="optionRow">
+
+      <button
+        class="optionButton shirtOption selected"
+        onclick="changeShirt('blue',this)"
+      >
+
+        <span class="colorCircle blueColor"></span>
+
+        Blue
+
+      </button>
+
+
+      <button
+        class="optionButton shirtOption"
+        onclick="changeShirt('red',this)"
+      >
+
+        <span class="colorCircle redColor"></span>
+
+        Red
+
+      </button>
+
+
+      <button
+        class="optionButton shirtOption"
+        onclick="changeShirt('pink',this)"
+      >
+
+        <span class="colorCircle pinkColor"></span>
+
+        Pink
+
+      </button>
+
+
+      <button
+        class="optionButton shirtOption"
+        onclick="changeShirt('green',this)"
+      >
+
+        <span class="colorCircle greenColor"></span>
+
+        Green
+
+      </button>
+
+    </div>
+
+
+    <button
+      id="playButton"
+      onclick="startGame()"
+    >
+
+      PLAY GAME <span>▶</span>
+
+    </button>
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+     WARNING
+========================= -->
+
+<div id="warningScreen">
+
+  <div class="warningCard">
+
+    <div class="warningIcon">
+      !
+    </div>
+
+
+    <h1>
+      THE ZOMBIES ARE COMING!
+    </h1>
+
+
+    <p>
+      Jump over them or stomp them from above.
+    </p>
+
+
+    <button
+      id="okButton"
+      onclick="beginRunning()"
+    >
+      OK
+    </button>
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+     GAME OVER
+========================= -->
+
+<div id="gameOverScreen">
+
+  <div class="gameOverCard">
+
+    <h1>
+      GAME OVER
+    </h1>
+
+
+    <p class="finalScoreText">
+      FINAL SCORE
+    </p>
+
+
+    <div id="finalScore">
+      0
+    </div>
+
+
+    <div id="highScoreMessage">
+      NEW HIGH SCORE!
+    </div>
+
+
+    <div id="nameArea">
+
+      <p>
+        ENTER YOUR NAME
+      </p>
+
+
+      <input
+        id="playerName"
+        type="text"
+        maxlength="12"
+        placeholder="PLAYER"
+      >
+
+
+      <button
+        id="saveScoreButton"
+        onclick="saveScore()"
+      >
+        SAVE SCORE
+      </button>
+
+    </div>
+
+
+    <div class="leaderboard">
+
+      <h2>
+        TOP 10
+      </h2>
+
+      <div id="leaderboardList"></div>
+
+    </div>
+
+
+    <button
+      id="playAgainButton"
+      onclick="playAgain()"
+    >
+      PLAY AGAIN
+    </button>
+
+
+    <button
+      id="characterButton"
+      onclick="backToCharacter()"
+    >
+      CHANGE CHARACTER
+    </button>
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+     GAME
+========================= -->
+
+<div id="game">
+
+  <div id="gameArea">
+
+    <div class="skySun"></div>
+
+
+    <div class="cloud gameCloud1"></div>
+    <div class="cloud gameCloud2"></div>
+    <div class="cloud gameCloud3"></div>
+
+
+    <div class="farHill hill1"></div>
+    <div class="farHill hill2"></div>
+
+
+    <div class="tree tree1">
+
+      <div class="treeTop"></div>
+      <div class="treeTrunk"></div>
+
+    </div>
+
+
+    <div class="tree tree2">
+
+      <div class="treeTop"></div>
+      <div class="treeTrunk"></div>
+
+    </div>
+
+
+    <!-- SCORE -->
+
+    <div id="scoreDisplay">
+
+      SCORE:
+      <span id="score">0</span>
+
+    </div>
+
+
+    <!-- PLAYER -->
+
+    <div id="player">
+
+      <div id="gameHead">
+
+        <div class="gameEye leftEye"></div>
+        <div class="gameEye rightEye"></div>
+
+      </div>
+
+
+      <div id="gameBody"></div>
+
+
+      <div class="playerLeg playerLeftLeg"></div>
+      <div class="playerLeg playerRightLeg"></div>
+
+    </div>
+
+
+    <!-- GROUND -->
+
+    <div
+      class="platform ground"
+      style="left:0px;bottom:0px;width:15000px;"
+    ></div>
+
+
+    <!-- PLATFORMS -->
+
+    <div
+      class="platform"
+      style="left:400px;bottom:105px;width:190px;"
+    ></div>
+
+
+    <div
+      class="platform"
+      style="left:700px;bottom:175px;width:180px;"
+    ></div>
+
+
+    <div
+      class="platform"
+      style="left:1000px;bottom:90px;width:230px;"
+    ></div>
+
+
+    <div
+      class="platform"
+      style="left:1300px;bottom:205px;width:180px;"
+    ></div>
+
+
+    <div
+      class="platform"
+      style="left:1600px;bottom:120px;width:260px;"
+    ></div>
+
+
+    <div
+      class="platform"
+      style="left:1950px;bottom:220px;width:180px;"
+    ></div>
+
+
+    <div
+      class="platform"
+      style="left:2250px;bottom:135px;width:270px;"
+    ></div>
+
+
+    <div
+      class="platform"
+      style="left:2600px;bottom:70px;width:330px;"
+    ></div>
+
+
+    <div
+      class="platform"
+      style="left:3050px;bottom:185px;width:200px;"
+    ></div>
+
+
+    <div
+      class="platform"
+      style="left:3400px;bottom:110px;width:280px;"
+    ></div>
+
+
+    <div
+      class="platform"
+      style="left:3800px;bottom:220px;width:200px;"
+    ></div>
+
+
+    <div
+      class="platform"
+      style="left:4200px;bottom:130px;width:300px;"
+    ></div>
+
+
+    <div
+      class="platform"
+      style="left:4650px;bottom:190px;width:220px;"
+    ></div>
+
+
+    <div
+      class="platform"
+      style="left:5100px;bottom:85px;width:350px;"
+    ></div>
+
+
+    <!-- ZOMBIES -->
+
+    <div id="zombieContainer"></div>
+
+
+    <!-- EFFECTS -->
+
+    <div id="effectsContainer"></div>
+
+  </div>
+
+
+  <div id="controls">
+
+    <button id="jumpButton">
+      JUMP
+    </button>
+
+
+    <p>
+      Tap the screen or press SPACE to jump
+    </p>
+
+  </div>
+
+</div>
