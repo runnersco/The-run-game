@@ -2,7 +2,6 @@
   box-sizing:border-box;
 }
 
-
 body {
   margin:0;
   font-family:Arial,sans-serif;
@@ -12,29 +11,23 @@ body {
   overflow-x:hidden;
 }
 
-
 button {
   font-family:inherit;
   cursor:pointer;
 }
 
 
-/* =========================
-   CHARACTER CREATOR
-========================= */
+/* CHARACTER CREATOR */
 
 #customization {
   min-height:100vh;
   padding:18px;
-  background:
-    radial-gradient(circle at top,#3a3a3a,#111 70%);
+  background:radial-gradient(circle at top,#3a3a3a,#111 70%);
 }
-
 
 .creatorHeader {
   margin-bottom:15px;
 }
-
 
 .miniLogo {
   display:inline-block;
@@ -47,19 +40,16 @@ button {
   font-size:12px;
 }
 
-
 .creatorHeader h1 {
   margin:8px 0 5px;
   font-size:27px;
 }
-
 
 .creatorHeader p {
   margin:5px;
   color:#aaa;
   font-size:14px;
 }
-
 
 .creatorCard {
   max-width:500px;
@@ -71,9 +61,7 @@ button {
 }
 
 
-/* =========================
-   PREVIEW
-========================= */
+/* PREVIEW */
 
 .previewArea {
   height:260px;
@@ -92,7 +80,6 @@ button {
   border:2px solid #444;
 }
 
-
 .sun,
 .skySun {
   position:absolute;
@@ -102,12 +89,10 @@ button {
   border-radius:50%;
 }
 
-
 .sun {
   right:25px;
   top:20px;
 }
-
 
 .previewCloud,
 .cloud {
@@ -116,13 +101,11 @@ button {
   border-radius:30px;
 }
 
-
 .previewCloud {
   width:75px;
   height:25px;
   opacity:.8;
 }
-
 
 .previewCloud:before,
 .previewCloud:after,
@@ -134,7 +117,6 @@ button {
   border-radius:50%;
 }
 
-
 .previewCloud:before,
 .cloud:before {
   width:35px;
@@ -142,7 +124,6 @@ button {
   left:15px;
   top:-15px;
 }
-
 
 .previewCloud:after,
 .cloud:after {
@@ -152,18 +133,15 @@ button {
   top:-10px;
 }
 
-
 .cloud1 {
   left:25px;
   top:50px;
 }
 
-
 .cloud2 {
   right:100px;
   top:90px;
 }
-
 
 #previewCharacter {
   width:100px;
@@ -174,7 +152,6 @@ button {
   transform:translateX(-50%);
   z-index:5;
 }
-
 
 #previewHead {
   width:82px;
@@ -187,7 +164,6 @@ button {
   border:4px solid rgba(0,0,0,.25);
 }
 
-
 #previewBody {
   width:86px;
   height:72px;
@@ -199,7 +175,6 @@ button {
   border:4px solid rgba(0,0,0,.25);
 }
 
-
 .previewLeg {
   position:absolute;
   width:25px;
@@ -209,20 +184,13 @@ button {
   border-radius:8px;
 }
 
-
 .leftLeg {
   left:18px;
 }
 
-
 .rightLeg {
   right:18px;
 }
-
-
-/* =========================
-   EYES
-========================= */
 
 .previewEye,
 .gameEye {
@@ -231,23 +199,19 @@ button {
   border-radius:50%;
 }
 
-
 .previewEye {
   width:10px;
   height:14px;
   top:31px;
 }
 
-
 .previewEye.leftEye {
   left:22px;
 }
 
-
 .previewEye.rightEye {
   right:22px;
 }
-
 
 .gameEye {
   width:8px;
@@ -255,20 +219,16 @@ button {
   top:21px;
 }
 
-
 .gameEye.leftEye {
   left:15px;
 }
-
 
 .gameEye.rightEye {
   right:15px;
 }
 
 
-/* =========================
-   OPTIONS
-========================= */
+/* OPTIONS */
 
 .sectionTitle {
   text-align:left;
@@ -280,13 +240,11 @@ button {
   letter-spacing:1.5px;
 }
 
-
 .optionRow {
   display:flex;
   flex-wrap:wrap;
   gap:7px;
 }
-
 
 .optionButton {
   flex:1;
@@ -301,12 +259,10 @@ button {
   font-weight:bold;
 }
 
-
 .optionButton.selected {
   border-color:#00c853;
   background:#183b27;
 }
-
 
 .colorCircle {
   display:block;
@@ -317,45 +273,36 @@ button {
   border:2px solid rgba(255,255,255,.4);
 }
 
-
 .originalColor {
   background:#8b5a2b;
 }
-
 
 .lightColor {
   background:#f1b27a;
 }
 
-
 .darkColor {
   background:#5a321f;
 }
-
 
 .blueColor {
   background:blue;
 }
 
-
 .redColor {
   background:red;
 }
 
-
 .pinkColor {
   background:pink;
 }
-
 
 .greenColor {
   background:green;
 }
 
 
-/* =========================
-   PLAY
-========================= */
+/* PLAY */
 
 #playButton {
   width:100%;
@@ -370,9 +317,7 @@ button {
 }
 
 
-/* =========================
-   WARNING
-========================= */
+/* WARNING */
 
 #warningScreen {
   display:none;
@@ -380,41 +325,27 @@ button {
   inset:0;
   z-index:1000;
 
-  background:
-    radial-gradient(circle,#421313,#100000 75%);
+  background:radial-gradient(circle,#421313,#100000 75%);
 
   align-items:center;
   justify-content:center;
 
-  padding:
-    max(16px,env(safe-area-inset-top))
-    16px
-    max(16px,env(safe-area-inset-bottom))
-    16px;
+  padding:16px;
 
   overflow-y:auto;
 }
-
 
 .warningCard {
   width:100%;
   max-width:420px;
-
   max-height:calc(100vh - 32px);
-
   overflow-y:auto;
-
   padding:24px 20px;
-
   background:#1e1e1e;
-
   border:3px solid #e53935;
-
   border-radius:20px;
-
   margin:auto;
 }
-
 
 .warningIcon {
   width:58px;
@@ -432,63 +363,36 @@ button {
   font-weight:900;
 }
 
-
 .warningCard h1 {
   margin:16px 0 8px;
-
   color:#ff5252;
-
   font-size:clamp(23px,7vw,32px);
-
   line-height:1.1;
 }
 
-
 .warningCard p {
   margin:10px 0;
-
   color:#ccc;
-
   line-height:1.45;
-
   font-size:15px;
 }
 
-
 #okButton {
   display:block;
-
   width:100%;
-
   min-height:52px;
-
   margin-top:14px;
-
   padding:13px 15px;
-
   background:#00c853;
-
   color:white;
-
   border:none;
-
   border-radius:12px;
-
   font-size:20px;
-
   font-weight:900;
-
-  line-height:1;
-
-  position:relative;
-
-  z-index:5;
 }
 
 
-/* =========================
-   GAME OVER
-========================= */
+/* GAME OVER */
 
 #gameOverScreen {
   display:none;
@@ -502,7 +406,6 @@ button {
   justify-content:center;
 }
 
-
 .gameOverCard {
   width:100%;
   max-width:430px;
@@ -510,16 +413,13 @@ button {
   background:#202020;
   border:2px solid #444;
   border-radius:22px;
-  box-shadow:0 20px 60px rgba(0,0,0,.7);
 }
-
 
 .gameOverCard h1 {
   margin:0;
   color:#ff4545;
   font-size:35px;
 }
-
 
 .finalScoreText {
   margin:12px 0 0;
@@ -528,14 +428,12 @@ button {
   font-weight:bold;
 }
 
-
 #finalScore {
   margin:3px 0 8px;
   color:#ffe45c;
   font-size:48px;
   font-weight:900;
 }
-
 
 #highScoreMessage {
   display:none;
@@ -549,13 +447,11 @@ button {
   font-weight:900;
 }
 
-
 #nameArea p {
   color:#aaa;
   font-size:12px;
   font-weight:bold;
 }
-
 
 #playerName {
   width:100%;
@@ -568,7 +464,6 @@ button {
   font-size:18px;
 }
 
-
 #saveScoreButton {
   width:100%;
   margin-top:8px;
@@ -580,16 +475,13 @@ button {
   font-weight:900;
 }
 
-
 #saveScoreButton:disabled {
   background:#444;
   color:#999;
 }
 
 
-/* =========================
-   LEADERBOARD
-========================= */
+/* LEADERBOARD */
 
 .leaderboard {
   margin-top:20px;
@@ -599,12 +491,10 @@ button {
   border-radius:15px;
 }
 
-
 .leaderboard h2 {
   margin:0 0 10px;
   font-size:18px;
 }
-
 
 .leaderRow {
   display:grid;
@@ -615,17 +505,14 @@ button {
   text-align:left;
 }
 
-
 .leaderRow:last-child {
   border-bottom:none;
 }
-
 
 .leaderRank {
   color:#aaa;
   font-weight:900;
 }
-
 
 .leaderName {
   overflow:hidden;
@@ -633,13 +520,11 @@ button {
   text-overflow:ellipsis;
 }
 
-
 .leaderScore {
   text-align:right;
   color:#ffe45c;
   font-weight:900;
 }
-
 
 .emptyBoard {
   color:#777;
@@ -647,14 +532,11 @@ button {
 }
 
 
-/* =========================
-   GAME
-========================= */
+/* GAME */
 
 #game {
   display:none;
 }
-
 
 #gameArea {
   width:100%;
@@ -674,34 +556,63 @@ button {
 }
 
 
-/* SCORE */
+/* LEVEL DISPLAY */
+
+#levelDisplay {
+  position:absolute;
+  top:15px;
+  right:15px;
+  z-index:100;
+
+  padding:8px 12px;
+
+  background:rgba(0,0,0,.65);
+  border-radius:12px;
+
+  font-size:14px;
+  font-weight:900;
+}
+
+
+/* HUD */
 
 #scoreDisplay {
   position:absolute;
   top:15px;
   left:15px;
   z-index:100;
+
   padding:9px 14px;
+
   background:rgba(0,0,0,.65);
   border-radius:12px;
-  font-size:18px;
+
+  font-size:17px;
   font-weight:900;
 }
-
 
 #score {
   color:#ffe45c;
 }
 
+.hudDivider {
+  color:#777;
+  margin:0 5px;
+}
 
-/* BACKGROUND */
+#livesDisplay {
+  color:#ff5252;
+  letter-spacing:3px;
+}
+
+
+/* LEVEL 1 BACKGROUND */
 
 .skySun {
   right:35px;
   top:30px;
   opacity:.9;
 }
-
 
 .cloud {
   width:100px;
@@ -710,24 +621,20 @@ button {
   z-index:1;
 }
 
-
 .gameCloud1 {
   left:80px;
   top:70px;
 }
-
 
 .gameCloud2 {
   left:470px;
   top:110px;
 }
 
-
 .gameCloud3 {
   left:850px;
   top:55px;
 }
-
 
 .farHill {
   position:absolute;
@@ -740,11 +647,9 @@ button {
   z-index:2;
 }
 
-
 .hill1 {
   left:-100px;
 }
-
 
 .hill2 {
   left:400px;
@@ -763,7 +668,6 @@ button {
   z-index:4;
 }
 
-
 .treeTop {
   position:absolute;
   width:75px;
@@ -774,7 +678,6 @@ button {
   left:-5px;
 }
 
-
 .treeTrunk {
   position:absolute;
   width:20px;
@@ -784,20 +687,114 @@ button {
   top:55px;
 }
 
-
 .tree1 {
   left:250px;
 }
-
 
 .tree2 {
   left:900px;
 }
 
 
-/* =========================
-   PLAYER
-========================= */
+/* LEVEL 2 BACKGROUND */
+
+#skyLevel2Background {
+  display:none;
+  position:absolute;
+  inset:0;
+  z-index:1;
+
+  background:
+    linear-gradient(
+      #58cfff 0%,
+      #c9f3ff 100%
+    );
+}
+
+.level2Mode #skyLevel2Background {
+  display:block;
+}
+
+.skyCloud {
+  position:absolute;
+  background:white;
+  border-radius:50px;
+  opacity:.8;
+}
+
+.skyCloud:before,
+.skyCloud:after {
+  content:"";
+  position:absolute;
+  background:white;
+  border-radius:50%;
+}
+
+.bigCloud {
+  width:170px;
+  height:55px;
+}
+
+.bigCloud:before {
+  width:70px;
+  height:70px;
+  left:25px;
+  top:-35px;
+}
+
+.bigCloud:after {
+  width:55px;
+  height:55px;
+  right:25px;
+  top:-25px;
+}
+
+.smallCloud {
+  width:110px;
+  height:35px;
+}
+
+.smallCloud:before {
+  width:45px;
+  height:45px;
+  left:18px;
+  top:-22px;
+}
+
+.smallCloud:after {
+  width:35px;
+  height:35px;
+  right:15px;
+  top:-16px;
+}
+
+.skyCloud1 {
+  left:40px;
+  top:100px;
+}
+
+.skyCloud2 {
+  left:520px;
+  top:190px;
+}
+
+.skyCloud3 {
+  left:900px;
+  top:70px;
+}
+
+.skyCloud4 {
+  left:280px;
+  top:300px;
+}
+
+.skyCloud5 {
+  left:760px;
+  top:320px;
+}
+
+
+/* PLAYER */
 
 #player {
   position:absolute;
@@ -809,7 +806,6 @@ button {
   transform-origin:center bottom;
 }
 
-
 #gameHead {
   width:60px;
   height:60px;
@@ -820,7 +816,6 @@ button {
   transform-origin:center bottom;
 }
 
-
 #gameBody {
   width:60px;
   height:50px;
@@ -829,7 +824,6 @@ button {
   border:3px solid rgba(0,0,0,.2);
   transform-origin:center center;
 }
-
 
 .playerLeg {
   position:absolute;
@@ -841,45 +835,51 @@ button {
   transform-origin:center top;
 }
 
-
 .playerLeftLeg {
   left:7px;
 }
-
 
 .playerRightLeg {
   right:7px;
 }
 
 
+/* DAMAGE */
+
+.playerInvincible {
+  animation:damageFlash .14s infinite alternate;
+}
+
+@keyframes damageFlash {
+  from {
+    opacity:1;
+  }
+
+  to {
+    opacity:.25;
+  }
+}
+
+
 /* RUNNING */
 
 .runningLeft {
-  animation:
-    legLeft .18s infinite alternate ease-in-out;
+  animation:legLeft .18s infinite alternate ease-in-out;
 }
-
 
 .runningRight {
-  animation:
-    legRight .18s infinite alternate ease-in-out;
+  animation:legRight .18s infinite alternate ease-in-out;
 }
-
 
 .runningBody {
-  animation:
-    bodyBounce .18s infinite alternate ease-in-out;
+  animation:bodyBounce .18s infinite alternate ease-in-out;
 }
-
 
 .runningHead {
-  animation:
-    headBounce .18s infinite alternate ease-in-out;
+  animation:headBounce .18s infinite alternate ease-in-out;
 }
-
 
 @keyframes legLeft {
-
   from {
     transform:rotate(24deg);
   }
@@ -888,10 +888,8 @@ button {
     transform:rotate(-24deg);
   }
 }
-
 
 @keyframes legRight {
-
   from {
     transform:rotate(-24deg);
   }
@@ -901,9 +899,7 @@ button {
   }
 }
 
-
 @keyframes bodyBounce {
-
   from {
     transform:translateY(0);
   }
@@ -913,9 +909,7 @@ button {
   }
 }
 
-
 @keyframes headBounce {
-
   from {
     transform:translateY(0) rotate(-2deg);
   }
@@ -932,16 +926,13 @@ button {
   transform:rotate(28deg);
 }
 
-
 .jumpPose .playerRightLeg {
   transform:rotate(-28deg);
 }
 
-
 .jumpPose #gameBody {
   transform:scaleX(.95);
 }
-
 
 .jumpPose #gameHead {
   transform:translateY(-3px);
@@ -954,9 +945,7 @@ button {
   animation:landSquash .16s ease-out;
 }
 
-
 @keyframes landSquash {
-
   0% {
     transform:scaleY(.78) scaleX(1.15);
   }
@@ -967,9 +956,7 @@ button {
 }
 
 
-/* =========================
-   ZOMBIES
-========================= */
+/* ZOMBIES */
 
 .zombie {
   position:absolute;
@@ -977,7 +964,6 @@ button {
   height:100px;
   z-index:15;
 }
-
 
 .zombieHead {
   width:58px;
@@ -988,7 +974,6 @@ button {
   position:relative;
 }
 
-
 .zombieBody {
   width:60px;
   height:45px;
@@ -996,7 +981,6 @@ button {
   border-radius:9px;
   border:3px solid #303d29;
 }
-
 
 .zombieEye {
   position:absolute;
@@ -1007,30 +991,124 @@ button {
   top:20px;
 }
 
-
 .zombieEye.left {
   left:13px;
 }
-
 
 .zombieEye.right {
   right:13px;
 }
 
 
-/* =========================
-   PLATFORMS
-========================= */
+/* SWANS */
+
+.swan {
+  position:absolute;
+  width:75px;
+  height:60px;
+  z-index:15;
+}
+
+.swanBody {
+  position:absolute;
+  left:12px;
+  bottom:5px;
+  width:55px;
+  height:38px;
+  background:white;
+  border:3px solid #aaa;
+  border-radius:50% 55% 45% 45%;
+}
+
+.swanNeck {
+  position:absolute;
+  left:42px;
+  bottom:27px;
+  width:17px;
+  height:42px;
+  background:white;
+  border:3px solid #aaa;
+  border-radius:50% 50% 0 0;
+  transform:rotate(15deg);
+}
+
+.swanHead {
+  position:absolute;
+  left:47px;
+  top:0;
+  width:25px;
+  height:25px;
+  background:white;
+  border:3px solid #aaa;
+  border-radius:50%;
+}
+
+.swanHead:after {
+  content:"";
+  position:absolute;
+  right:-14px;
+  top:7px;
+  width:15px;
+  height:8px;
+  background:#ff9d28;
+  border-radius:3px 8px 8px 3px;
+}
+
+.swanEye {
+  position:absolute;
+  width:5px;
+  height:5px;
+  background:#111;
+  border-radius:50%;
+  right:8px;
+  top:6px;
+  z-index:2;
+}
+
+.swanWing {
+  position:absolute;
+  left:20px;
+  bottom:16px;
+  width:35px;
+  height:20px;
+  background:#e8e8e8;
+  border-radius:50%;
+  transform:rotate(-15deg);
+}
+
+.swan.fast .swanWing {
+  animation:wingFlap .18s infinite alternate;
+}
+
+.swan.tank {
+  transform:scale(1.35);
+}
+
+.swan.fast {
+  transform:scale(.82);
+}
+
+@keyframes wingFlap {
+  from {
+    transform:rotate(-15deg);
+  }
+
+  to {
+    transform:rotate(15deg);
+  }
+}
+
+
+/* PLATFORMS */
 
 .platform {
   position:absolute;
   height:26px;
 
-  background:
-    linear-gradient(
-      #8a5b32,
-      #633b20
-    );
+  background:linear-gradient(
+    #8a5b32,
+    #633b20
+  );
 
   border-radius:7px 7px 3px 3px;
   border-top:6px solid #4e963e;
@@ -1038,15 +1116,13 @@ button {
   z-index:10;
 }
 
-
 .ground {
   height:45px;
 
-  background:
-    linear-gradient(
-      #704523,
-      #573319
-    );
+  background:linear-gradient(
+    #704523,
+    #573319
+  );
 
   border-top:8px solid #4e8b3c;
   border-radius:0;
@@ -1054,9 +1130,68 @@ button {
 }
 
 
-/* =========================
-   DUST
-========================= */
+/* LEVEL 2 CLOUD GROUND */
+
+.level2Mode .ground {
+  height:75px;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      white 0 35px,
+      transparent 36px
+    ),
+    radial-gradient(
+      circle at 30% 70%,
+      white 0 45px,
+      transparent 46px
+    ),
+    radial-gradient(
+      circle at 55% 25%,
+      white 0 40px,
+      transparent 41px
+    ),
+    radial-gradient(
+      circle at 80% 65%,
+      white 0 50px,
+      transparent 51px
+    ),
+    #f7f7f7;
+
+  border-top:8px solid #dcefff;
+  border-radius:35px 35px 0 0;
+}
+
+
+/* LEVEL 2 CLOUD PLATFORMS */
+
+.level2Mode .level2Platform {
+  height:32px;
+
+  background:
+    radial-gradient(
+      circle at 20% 0,
+      white 0 28px,
+      transparent 29px
+    ),
+    radial-gradient(
+      circle at 55% 0,
+      white 0 32px,
+      transparent 33px
+    ),
+    radial-gradient(
+      circle at 85% 0,
+      white 0 25px,
+      transparent 26px
+    ),
+    #f7f7f7;
+
+  border-top:5px solid #dcefff;
+  border-radius:25px 25px 10px 10px;
+}
+
+
+/* DUST */
 
 .dust {
   position:absolute;
@@ -1069,6 +1204,9 @@ button {
   animation:dustPop .35s forwards;
 }
 
+.level2Mode .dust {
+  background:white;
+}
 
 @keyframes dustPop {
 
@@ -1087,15 +1225,189 @@ button {
 }
 
 
-/* =========================
-   CONTROLS
-========================= */
+/* LEVEL 1 END LADDER */
+
+#levelEnd {
+  position:absolute;
+  left:9500px;
+  bottom:45px;
+  width:130px;
+  height:330px;
+  z-index:14;
+  pointer-events:none;
+}
+
+#ladder {
+  position:absolute;
+  left:25px;
+  bottom:0;
+  width:80px;
+  height:300px;
+}
+
+.ladderSide {
+  position:absolute;
+  bottom:0;
+  width:9px;
+  height:300px;
+  background:#8b5a32;
+  border:2px solid #4d2d18;
+  border-radius:5px;
+}
+
+.ladderSide.left {
+  left:0;
+}
+
+.ladderSide.right {
+  right:0;
+}
+
+.ladderRung {
+  position:absolute;
+  left:4px;
+  width:72px;
+  height:9px;
+  background:#9d683b;
+  border:2px solid #4d2d18;
+  border-radius:4px;
+}
+
+.rung1 {
+  bottom:25px;
+}
+
+.rung2 {
+  bottom:65px;
+}
+
+.rung3 {
+  bottom:105px;
+}
+
+.rung4 {
+  bottom:145px;
+}
+
+.rung5 {
+  bottom:185px;
+}
+
+.rung6 {
+  bottom:225px;
+}
+
+.rung7 {
+  bottom:265px;
+}
+
+
+/* LEVEL 2 END */
+
+#level2End {
+  display:none;
+
+  position:absolute;
+  left:9500px;
+  bottom:75px;
+
+  width:100px;
+  height:230px;
+
+  z-index:14;
+}
+
+.level2Mode #level2End {
+  display:block;
+}
+
+.finishPole {
+  position:absolute;
+  left:45px;
+  bottom:0;
+  width:8px;
+  height:220px;
+  background:#777;
+  border:2px solid #444;
+}
+
+.finishFlag {
+  position:absolute;
+  left:52px;
+  top:10px;
+
+  width:70px;
+  height:45px;
+
+  background:
+    linear-gradient(
+      45deg,
+      #222 25%,
+      white 25%,
+      white 50%,
+      #222 50%,
+      #222 75%,
+      white 75%
+    );
+
+  border:2px solid #444;
+}
+
+
+/* TO BE CONTINUED */
+
+#levelEndText {
+  position:fixed;
+  inset:0;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:rgba(0,0,0,.9);
+
+  color:white;
+  font-size:clamp(30px,8vw,60px);
+  font-weight:900;
+  letter-spacing:3px;
+
+  opacity:0;
+  pointer-events:none;
+
+  z-index:5000;
+
+  transition:opacity .5s ease;
+}
+
+#levelEndText.show {
+  opacity:1;
+}
+
+
+/* CLIMBING */
+
+.playerClimbing {
+  animation:climbBounce .32s infinite alternate ease-in-out;
+}
+
+@keyframes climbBounce {
+
+  from {
+    transform:translateY(0);
+  }
+
+  to {
+    transform:translateY(-7px);
+  }
+}
+
+
+/* CONTROLS */
 
 #controls {
   padding:12px;
   background:#171717;
 }
-
 
 #jumpButton {
   width:160px;
@@ -1108,14 +1420,40 @@ button {
   border:none;
 }
 
-
 #jumpButton:active {
   transform:scale(.95);
 }
-
 
 #controls p {
   margin:5px 0 0;
   color:#999;
   font-size:12px;
+}
+
+
+/* HIDE LEVELS */
+
+.level2Platform {
+  display:none;
+}
+
+.level1Platform {
+  display:block;
+}
+
+.level2Mode .level1Platform {
+  display:none;
+}
+
+.level2Mode .level2Platform {
+  display:block;
+}
+
+.level2Mode .skySun,
+.level2Mode .gameCloud1,
+.level2Mode .gameCloud2,
+.level2Mode .gameCloud3,
+.level2Mode .farHill,
+.level2Mode .tree {
+  display:none;
 }
